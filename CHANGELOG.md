@@ -6,5 +6,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Added
+ - Added command-line arguments parser
  - Added README file
 [Unreleased]: main..dev
