@@ -68,6 +68,10 @@ pub struct Cli {
     #[arg(long = "dev", default_value = "dev")]
     pub dev_branch: String,
 
+    /// Release branch name
+    #[arg(long = "release", default_value = "release")]
+    pub release_branch: String,
+
     /// Feature branch name prefix
     #[arg(long = "feature-prefix", default_value = "feature-")]
     pub feature_branch_prefix: String,
