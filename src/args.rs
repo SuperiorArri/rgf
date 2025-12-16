@@ -1,3 +1,5 @@
+use std::path::PathBuf;
+
 use clap::{ArgAction, Parser, ValueEnum};
 
 #[derive(Parser, Debug)]
@@ -56,6 +58,26 @@ pub struct Cli {
     /// Assume yes for all questions
     #[arg(short = 'y', long = "yes")]
     pub yes: bool,
+
+    /// Main branch name
+    #[arg(long = "main", default_value = "main")]
+    pub main_branch: String,
+
+    /// Dev branch name
+    #[arg(long = "dev", default_value = "dev")]
+    pub dev_branch: String,
+
+    /// Feature branch name prefix
+    #[arg(long = "feature-prefix", default_value = "feature-")]
+    pub feature_branch_prefix: String,
+
+    /// Hotfix branch name prefix
+    #[arg(long = "hotfix-prefix", default_value = "hotfix-")]
+    pub hotfix_branch_prefix: String,
+
+    /// Path to version update script (called with version string as an argument)
+    #[arg(long = "version-update-script")]
+    pub version_update_script: Option<PathBuf>,
 
     /// Optional positional keyword
     pub keyword: Option<String>,
