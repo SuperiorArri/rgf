@@ -1,11 +1,12 @@
+use clap::{ArgAction, Parser, ValueEnum};
 use std::path::PathBuf;
 
-use clap::{ArgAction, Parser, ValueEnum};
+const RGF_VERSION: &str = env!("RGF_VERSION");
 
 #[derive(Parser, Debug)]
 #[command(
     name = "rgf",
-    version,
+    version = RGF_VERSION,
     about = "RGF command-line tool",
     disable_version_flag = true
 )]
