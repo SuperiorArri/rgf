@@ -1,7 +1,5 @@
-use clap::Parser;
-use rgf::args::Cli;
 
 fn main() {
-    let args = Cli::parse();
+    let args = rgf::get_args();
     println!("{:?}", args);
 }
